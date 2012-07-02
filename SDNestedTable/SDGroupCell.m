@@ -8,7 +8,7 @@
 
 #import "SDGroupCell.h"
 #import <QuartzCore/QuartzCore.h>
-#import "SDNestedTable.h"
+#import "SDNestedTableViewController.h"
 
 @implementation SDGroupCell
 
