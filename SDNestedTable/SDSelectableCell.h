@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class SDNestedTable;
+@class SDNestedTableViewController;
 
 typedef enum
 {
@@ -30,7 +30,7 @@ SelectableCellState;
 
 @property (nonatomic) IBOutlet UILabel *itemText;
 
-@property (nonatomic, assign) SDNestedTable *parentTable;
+@property (nonatomic, assign) SDNestedTableViewController *parentTable;
 @property (nonatomic) SelectableCellState selectableCellState;
 
 - (SelectableCellState) toggleCheck;
