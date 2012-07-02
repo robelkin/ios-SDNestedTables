@@ -1,5 +1,5 @@
 //
-//  SDNestedTables.h
+//  SDNestedTableViewController.h
 //  SDNestedTablesExample
 //
 //  Created by Daniele De Matteis on 21/05/2012.
@@ -18,7 +18,7 @@
 
 @end
 
-@interface SDNestedTable : UITableViewController<SDNestedTableDelegate>
+@interface SDNestedTableViewController : UITableViewController<SDNestedTableDelegate>
 {
 	NSMutableDictionary *expandedIndexes;
     NSMutableDictionary *selectableCellsState;

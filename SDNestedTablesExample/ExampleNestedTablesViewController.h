@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Daniele De Matteis. All rights reserved.
 //
 
-#import "SDNestedTable.h"
+#import "SDNestedTableViewController.h"
 
-@interface ExampleNestedTablesViewController : SDNestedTable
+@interface ExampleNestedTablesViewController : SDNestedTableViewController
 
 @end

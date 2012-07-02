@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1876376A15A248C6004F1598 /* SDNestedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876376915A248C6004F1598 /* SDNestedTableViewController.m */; };
+		1876376C15A249C1004F1598 /* SDNestedTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1876376B15A249C1004F1598 /* SDNestedTableView.xib */; };
 		8B8EB7E6156A74B00061CF0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E5156A74B00061CF0C /* UIKit.framework */; };
 		8B8EB7E8156A74B00061CF0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E7156A74B00061CF0C /* Foundation.framework */; };
 		8B8EB7EA156A74B00061CF0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8EB7E9156A74B00061CF0C /* CoreGraphics.framework */; };
@@ -20,10 +22,8 @@
 		8BA40482159E212400F3D367 /* disclosure.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40479159E212400F3D367 /* disclosure.png */; };
 		8BA40483159E212400F3D367 /* disclosure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA4047A159E212400F3D367 /* disclosure@2x.png */; };
 		8BA40487159E212A00F3D367 /* SDGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40484159E212A00F3D367 /* SDGroupCell.xib */; };
-		8BA40488159E212A00F3D367 /* SDNestedTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40485159E212A00F3D367 /* SDNestedTable.xib */; };
 		8BA40489159E212A00F3D367 /* SDSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40486159E212A00F3D367 /* SDSubCell.xib */; };
 		8BA40493159E214E00F3D367 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BA40491159E214E00F3D367 /* InfoPlist.strings */; };
-		8BA40494159E215A00F3D367 /* SDNestedTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4046B159E211200F3D367 /* SDNestedTable.m */; };
 		8BA40495159E215D00F3D367 /* SDSelectableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4046F159E211A00F3D367 /* SDSelectableCell.m */; };
 		8BA40496159E215F00F3D367 /* SDGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA4046D159E211A00F3D367 /* SDGroupCell.m */; };
 		8BA40497159E216200F3D367 /* SDSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA40471159E211A00F3D367 /* SDSubCell.m */; };
@@ -33,12 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1876376815A248C6004F1598 /* SDNestedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDNestedTableViewController.h; path = SDNestedTablesExample/Classes/SDNestedTableViewController.h; sourceTree = SOURCE_ROOT; };
+		1876376915A248C6004F1598 /* SDNestedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDNestedTableViewController.m; path = SDNestedTablesExample/Classes/SDNestedTableViewController.m; sourceTree = SOURCE_ROOT; };
+		1876376B15A249C1004F1598 /* SDNestedTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SDNestedTableView.xib; path = SDNestedTablesExample/Nibs/SDNestedTableView.xib; sourceTree = SOURCE_ROOT; };
 		8B8EB7E1156A74B00061CF0C /* SDNestedTablesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDNestedTablesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8EB7E5156A74B00061CF0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B8EB7E7156A74B00061CF0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8B8EB7E9156A74B00061CF0C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8BA4046A159E211200F3D367 /* SDNestedTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDNestedTable.h; path = SDNestedTablesExample/Classes/SDNestedTable.h; sourceTree = SOURCE_ROOT; };
-		8BA4046B159E211200F3D367 /* SDNestedTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDNestedTable.m; path = SDNestedTablesExample/Classes/SDNestedTable.m; sourceTree = SOURCE_ROOT; };
 		8BA4046C159E211A00F3D367 /* SDGroupCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDGroupCell.h; path = SDNestedTablesExample/Classes/SDGroupCell.h; sourceTree = SOURCE_ROOT; };
 		8BA4046D159E211A00F3D367 /* SDGroupCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SDGroupCell.m; path = SDNestedTablesExample/Classes/SDGroupCell.m; sourceTree = SOURCE_ROOT; };
 		8BA4046E159E211A00F3D367 /* SDSelectableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDSelectableCell.h; path = SDNestedTablesExample/Classes/SDSelectableCell.h; sourceTree = SOURCE_ROOT; };
@@ -55,7 +56,6 @@
 		8BA40479159E212400F3D367 /* disclosure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = disclosure.png; path = "SDNestedTablesExample/Default Images/disclosure.png"; sourceTree = SOURCE_ROOT; };
 		8BA4047A159E212400F3D367 /* disclosure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "disclosure@2x.png"; path = "SDNestedTablesExample/Default Images/disclosure@2x.png"; sourceTree = SOURCE_ROOT; };
 		8BA40484159E212A00F3D367 /* SDGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SDGroupCell.xib; path = SDNestedTablesExample/Nibs/SDGroupCell.xib; sourceTree = SOURCE_ROOT; };
-		8BA40485159E212A00F3D367 /* SDNestedTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SDNestedTable.xib; path = SDNestedTablesExample/Nibs/SDNestedTable.xib; sourceTree = SOURCE_ROOT; };
 		8BA40486159E212A00F3D367 /* SDSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SDSubCell.xib; path = SDNestedTablesExample/Nibs/SDSubCell.xib; sourceTree = SOURCE_ROOT; };
 		8BA4048A159E213800F3D367 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SDNestedTablesExample/AppDelegate.h; sourceTree = "<group>"; };
 		8BA4048B159E213800F3D367 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SDNestedTablesExample/AppDelegate.m; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		8B72263D159A1DE3001B28C5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8BA4046A159E211200F3D367 /* SDNestedTable.h */,
-				8BA4046B159E211200F3D367 /* SDNestedTable.m */,
+				1876376815A248C6004F1598 /* SDNestedTableViewController.h */,
+				1876376915A248C6004F1598 /* SDNestedTableViewController.m */,
 				8B720524159CABEB006BC732 /* Cells */,
 			);
 			name = Classes;
@@ -108,7 +108,7 @@
 		8B72264B159A1DF0001B28C5 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
-				8BA40485159E212A00F3D367 /* SDNestedTable.xib */,
+				1876376B15A249C1004F1598 /* SDNestedTableView.xib */,
 				8BA40484159E212A00F3D367 /* SDGroupCell.xib */,
 				8BA40486159E212A00F3D367 /* SDSubCell.xib */,
 			);
@@ -247,9 +247,9 @@
 				8BA40482159E212400F3D367 /* disclosure.png in Resources */,
 				8BA40483159E212400F3D367 /* disclosure@2x.png in Resources */,
 				8BA40487159E212A00F3D367 /* SDGroupCell.xib in Resources */,
-				8BA40488159E212A00F3D367 /* SDNestedTable.xib in Resources */,
 				8BA40489159E212A00F3D367 /* SDSubCell.xib in Resources */,
 				8BA40493159E214E00F3D367 /* InfoPlist.strings in Resources */,
+				1876376C15A249C1004F1598 /* SDNestedTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +266,7 @@
 				8BA40497159E216200F3D367 /* SDSubCell.m in Sources */,
 				8BA40496159E215F00F3D367 /* SDGroupCell.m in Sources */,
 				8BA40495159E215D00F3D367 /* SDSelectableCell.m in Sources */,
-				8BA40494159E215A00F3D367 /* SDNestedTable.m in Sources */,
+				1876376A15A248C6004F1598 /* SDNestedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
