@@ -19,7 +19,7 @@
 
 - (id) init
 {
-    if (self = [self initWithNibName:@"SDNestedTable" bundle:nil])
+    if (self = [self initWithNibName:@"SDNestedTableView" bundle:nil])
     {
     }
     return self;
