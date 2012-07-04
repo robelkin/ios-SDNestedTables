@@ -23,37 +23,38 @@ Then implement the following convenience methods:
 
 
 
-#### - (NSInteger) mainTable:(UITableView *)mainTable numberOfItemsInSection:(NSInteger)section;
+#### - (NSInteger)mainTable:(UITableView *)mainTable numberOfItemsInSection:(NSInteger)section;
 here you can set the amount of Items in your Main table:
 
 	- (NSInteger)mainTable:(UITableView *)mainTable numberOfItemsInSection:(NSInteger)section
 	{
 	    return 15; // amount of Main Items
 	}
-
-#### - (NSInteger) mainTable:(UITableView *)mainTable numberOfSubItemsforItem:(EFMGroupCell *)item atIndexPath:(NSIndexPath *)indexPath;
+	
+		
+#### - (NSInteger)mainTable:(UITableView *)mainTable numberOfSubItemsforItem:(SDGroupCell *)item atIndexPath:(NSIndexPath *)indexPath;
 here you can set the amount of Sub Items for each Item in the Main table:
 
-	- (NSInteger)mainTable:(UITableView *)mainTable numberOfSubItemsforItem:(EFMGroupCell *)item atIndexPath:(NSIndexPath *)indexPath
+	- (NSInteger)mainTable:(UITableView *)mainTable numberOfSubItemsforItem:(SDGroupCell *)item atIndexPath:(NSIndexPath *)indexPath
 	{
 	    return 3; // amount of Sub Items for each Main Item
 	}
+	
 
-
-#### - (EFMGroupCell *) mainTable:(UITableView *)mainTable setItem:(EFMGroupCell *)item forRowAtIndexPath:(NSIndexPath *)indexPath;
+#### - (SDGroupCell *)mainTable:(UITableView *)mainTable setItem:(SDGroupCell *)item forRowAtIndexPath:(NSIndexPath *)indexPath;
 here you can set the Item's cell attributes:
 
-	- (EFMGroupCell *)mainTable:(UITableView *)mainTable setItem:(EFMGroupCell *)item forRowAtIndexPath:(NSIndexPath *)indexPath
+	- (SDGroupCell *)mainTable:(UITableView *)mainTable setItem:(SDGroupCell *)item forRowAtIndexPath:(NSIndexPath *)indexPath
 	{
 	    item.itemText.text = [NSString stringWithFormat:@"My Main Item %u", indexPath.row +1];
 	    return item;
 	}
 
 
-#### - (EFMSubCell *) item:(EFMGroupCell *)item setSubItem:(EFMSubCell *)subItem forRowAtIndexPath:(NSIndexPath *)indexPath;
+#### - (SDSubCell *)item:(SDGroupCell *)item setSubItem:(SDSubCell *)subItem forRowAtIndexPath:(NSIndexPath *)indexPath;
 here you can set the Sub Item's cell attributes:
 
-	- (EFMSubCell *)item:(EFMGroupCell *)item setSubItem:(EFMSubCell *)subItem forRowAtIndexPath:(NSIndexPath *)indexPath
+	- (SDSubCell *)item:(SDGroupCell *)item setSubItem:(SDSubCell *)subItem forRowAtIndexPath:(NSIndexPath *)indexPath
 	{
 	    subItem.itemText.text = [NSString stringWithFormat:@"My Sub Item %u", indexPath.row +1];
 	    return subItem;
@@ -65,10 +66,10 @@ here you can set the Sub Item's cell attributes:
 
 EFMNestedTable implements the EFMNestedTableDelegate protocol, however you are free to implement the following methods yourself if they will provide useful information.
 
-#### - mainTable:(UITableView *)mainTable itemDidChange:(EFMGroupCell *)item;
+#### - (void)mainTable:(UITableView *)mainTable itemDidChange:(SDGroupCell *)item;
 this is called when the Item state changes, here you can manage behavior according to the Item state:
 
-	- (void) mainTable:(UITableView *)mainTable itemDidChange:(EFMGroupCell *)item
+	- (void)mainTable:(UITableView *)mainTable itemDidChange:(SDGroupCell *)item
 	{
 		SelectableCellState state = item.selectableCellState;
 		NSIndexPath *indexPath = [self.tableView indexPathForCell:item];
@@ -88,22 +89,22 @@ this is called when the Item state changes, here you can manage behavior accordi
 	}
 	
 
-#### - item:(EFMGroupCell *)item subItemDidChange:(EFMSelectableCell *)subItem;
+#### - (void) item:(SDGroupCell *)item subItemDidChange:(SDSelectableCell *)subItem;
 this is called when the Sub Item state changes, here you can manage behavior according to the Sub Item state:
 
-	- item:(EFMGroupCell *)item subItemDidChange:(EFMSelectableCell *)subItem;
+	- (void) item:(SDGroupCell *)item subItemDidChange:(SDSelectableCell *)subItem
 	{
-		SelectableCellState state = item.selectableCellState;
-		NSIndexPath *indexPath = [self.tableView indexPathForCell:item];
+	    SelectableCellState state = subItem.selectableCellState;
+	    NSIndexPath *indexPath = [item.subTable indexPathForCell:subItem];
 	    switch (state) {
 	        case Checked:
 	        	// do stuff
-	        break;
+	            break;
 	        case Unchecked:
 	        	// do stuff
-	        break;
+	            break;
 	        default:
-	        break;
+	            break;
 	    }
 	}
 
@@ -111,23 +112,22 @@ this is called when the Sub Item state changes, here you can manage behavior acc
 <br />
 ### Other methods
 
-#### - (void) collapsingItem:(EFMGroupCell *)item withIndexPath:(NSIndexPath *)indexPath;
+#### - (void)expandingItem:(SDGroupCell *)item withIndexPath:(NSIndexPath *)indexPath;
 this is called when a Main Item starts collapsing, here you can manage behavior according to this event:
 
-	- (void)expandingItem:(EFMGroupCell *)item withIndexPath:(NSIndexPath *)indexPath
+	- (void)expandingItem:(SDGroupCell *)item withIndexPath:(NSIndexPath *)indexPath
 	{
 		// do stuff
 	}
 
 
-#### - (void) expandingItem:(EFMGroupCell *)item withIndexPath:(NSIndexPath *)indexPath;
+#### - (void)collapsingItem:(SDGroupCell *)item withIndexPath:(NSIndexPath *)indexPath;
 this is called when a Main Item starts expanding, here you can manage behavior according to this event:
 
-	- (void)collapsingItem:(EFMGroupCell *)item withIndexPath:(NSIndexPath *)indexPath 
+	- (void)collapsingItem:(SDGroupCell *)item withIndexPath:(NSIndexPath *)indexPath 
 	{
 		// do stuff
 	}
-
 
 
 <br />
@@ -136,7 +136,7 @@ this is called when a Main Item starts expanding, here you can manage behavior a
 
 #### Main Items & Sub Items
 
-EFMNestedTables *parentTable
+SDNestedTableViewController *parentTable
 
 SelectableCellState selectableCellState
 
@@ -150,11 +150,16 @@ UITableView *subTable
 BOOL isExpanded
 
 
+	// all items
+	
 	item.parentTable
 	
 	item.selectableCellState
 	
 	item.itemText
+	
+	
+	// only Main Items
 	
 	item.subTable
 	
