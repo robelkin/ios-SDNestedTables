@@ -27,12 +27,12 @@
 
 - (NSInteger)mainTable:(UITableView *)mainTable numberOfItemsInSection:(NSInteger)section
 {
-    return 15;
+    return 8;
 }
 
 - (NSInteger)mainTable:(UITableView *)mainTable numberOfSubItemsforItem:(SDGroupCell *)item atIndexPath:(NSIndexPath *)indexPath
 {
-    return 3; 
+    return rand() % 5 + 1; 
 }
 
 - (SDGroupCell *)mainTable:(UITableView *)mainTable setItem:(SDGroupCell *)item forRowAtIndexPath:(NSIndexPath *)indexPath

@@ -31,7 +31,7 @@
     tapTransitionsOverlay.backgroundColor = [UIColor colorWithRed:0.15 green:0.54 blue:0.93 alpha:1.0];
     
     CGRect frame = self.itemText.frame;
-    frame.size.width = checkBox.frame.origin.x - frame.origin.x - (self.frame.size.width/30);
+    frame.size.width = checkBox.frame.origin.x - frame.origin.x - (int)(self.frame.size.width/30);
     self.itemText.frame = frame;
 }
 
