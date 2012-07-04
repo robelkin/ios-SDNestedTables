@@ -1,19 +1,19 @@
-SDNestedTables
+SDNestedTable
 ===============
 
 Obj-C module built on UITableView for creating a 2-level nested list UI control, iOS 4.0+.
 
-![EFMNestedTables Screenshot 1 - iPhone Portrait](http://github.com/morekid/EFMNestedTables/raw/master/README/iPhone_P_shot1.png)&nbsp;&nbsp;
-![EFMNestedTables Screenshot 2 - iPhone Portrait](http://github.com/morekid/EFMNestedTables/raw/master/README/iPhone_P_shot2.png)&nbsp;&nbsp;
-![EFMNestedTables Screenshot 3 - iPhone Portrait](http://github.com/morekid/EFMNestedTables/raw/master/README/iPhone_P_shot3.png)&nbsp;&nbsp;
-![EFMNestedTables Screenshot 4 - iPhone Portrait](http://github.com/morekid/EFMNestedTables/raw/master/README/iPhone_P_shot4.png)&nbsp;&nbsp;
-![EFMNestedTables Screenshot 1 - iPad Landscape](http://github.com/morekid/EFMNestedTables/raw/master/README/iPad_L_shot1.png)
+![SDNestedTable Screenshot 1 - iPhone Portrait](http://github.com/boxedice/ios-SDNestedTables/raw/master/README/iPhone_P_shot1.png)&nbsp;&nbsp;
+![SDNestedTable Screenshot 2 - iPhone Portrait](http://github.com/boxedice/ios-SDNestedTables/raw/master/README/iPhone_P_shot2.png)&nbsp;&nbsp;
+![SDNestedTable Screenshot 3 - iPhone Portrait](http://github.com/boxedice/ios-SDNestedTables/raw/master/README/iPhone_P_shot3.png)&nbsp;&nbsp;
+![SDNestedTable Screenshot 4 - iPhone Portrait](http://github.com/boxedice/ios-SDNestedTables/raw/master/README/iPhone_P_shot4.png)&nbsp;&nbsp;
+![SDNestedTable Screenshot 1 - iPad Landscape](http://github.com/boxedice/ios-SDNestedTables/raw/master/README/iPad_L_shot1.png)
 
 
 How To:
 -------
 
-Create a subclass of EFMNestedTable. You can call either init or initWithNibName:bundle:. Calling init will call initWithNibName:@"EFMNestedTable" bundle:nil. 
+Create a subclass of SDNestedTable. You can call either init or initWithNibName:bundle:. Calling init will call initWithNibName:@"SDNestedTableView" bundle:nil. 
 
 Then implement the following convenience methods:
 
@@ -64,7 +64,7 @@ here you can set the Sub Item's cell attributes:
 <br />
 ### Delegate methods
 
-EFMNestedTable implements the EFMNestedTableDelegate protocol, however you are free to implement the following methods yourself if they will provide useful information.
+SDNestedTable implements the SDNestedTableDelegate protocol, however you are free to implement the following methods yourself if they will provide useful information.
 
 #### - (void)mainTable:(UITableView *)mainTable itemDidChange:(SDGroupCell *)item;
 this is called when the Item state changes, here you can manage behavior according to the Item state:
