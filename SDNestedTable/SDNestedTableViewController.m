@@ -203,7 +203,7 @@
     BOOL isExpanded = [[expandedIndexes objectForKey:indexPath] boolValue];
     if(isExpanded)
     {
-        return [SDGroupCell getHeight] + [SDGroupCell getsubCellHeight]*amt;
+        return [SDGroupCell getHeight] + [SDGroupCell getsubCellHeight]*amt + 1;
     }
     return [SDGroupCell getHeight];
 }

@@ -28,6 +28,8 @@
 
 - (void) setupInterface
 {
+    [self setClipsToBounds: YES];
+    
     tapTransitionsOverlay.backgroundColor = [UIColor colorWithRed:0.15 green:0.54 blue:0.93 alpha:1.0];
     
     CGRect frame = self.itemText.frame;
