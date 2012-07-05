@@ -16,7 +16,7 @@
 
 - (id) init
 {
-    if (self = [super initWithNibName:@"SDNestedTable" bundle:nil])
+    if (self = [super initWithNibName:@"SDNestedTableView" bundle:nil])
     {
         // do init stuff
     }
