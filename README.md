@@ -4,15 +4,10 @@ SDNestedTable
 Obj-C module built on UITableView for creating a 2-level nested list UI control, iOS 4.0+.
 
 ![SDNestedTable Screenshot 1 - iPhone Portrait](http://github.com/serverdensity/ios-SDNestedTable/raw/master/README/iPhone_P_shot1.png)&nbsp;&nbsp;
-![SDNestedTable Screenshot 2 - iPhone Portrait](http://github.com/boxedice/ios-SDNestedTable/raw/master/README/iPhone_P_shot2.png)&nbsp;&nbsp;
-![SDNestedTable Screenshot 3 - iPhone Portrait](http://github.com/boxedice/ios-SDNestedTable/raw/master/README/iPhone_P_shot3.png)&nbsp;&nbsp;
-![SDNestedTable Screenshot 4 - iPhone Portrait](http://github.com/boxedice/ios-SDNestedTable/raw/master/README/iPhone_P_shot4.png)&nbsp;&nbsp;
-![SDNestedTable Screenshot 1 - iPad Landscape](http://github.com/boxedice/ios-SDNestedTable/raw/master/README/iPad_L_shot1.png)
-![Alt text](README/iPhone_P_shot1.png "SDNestedTable Screenshot 1 - iPhone Portrait")&nbsp;&nbsp;
-![Alt text](README/iPhone_P_shot2.png "SDNestedTable Screenshot 2 - iPhone Portrait")&nbsp;&nbsp;
-![Alt text](README/iPhone_P_shot3.png "SDNestedTable Screenshot 3 - iPhone Portrait")&nbsp;&nbsp;
-![Alt text](README/iPhone_P_shot4.png "SDNestedTable Screenshot 4 - iPhone Portrait")&nbsp;&nbsp;
-![Alt text](README/iPad_L_shot1.png "SDNestedTable Screenshot 5 - iPad Landscape")
+![SDNestedTable Screenshot 2 - iPhone Portrait](http://github.com/serverdensity/ios-SDNestedTable/raw/master/README/iPhone_P_shot2.png)&nbsp;&nbsp;
+![SDNestedTable Screenshot 3 - iPhone Portrait](http://github.com/serverdensity/ios-SDNestedTable/raw/master/README/iPhone_P_shot3.png)&nbsp;&nbsp;
+![SDNestedTable Screenshot 4 - iPhone Portrait](http://github.com/serverdensity/ios-SDNestedTable/raw/master/README/iPhone_P_shot4.png)&nbsp;&nbsp;
+![SDNestedTable Screenshot 5 - iPad Landscape](http://github.com/serverdensity/ios-SDNestedTable/raw/master/README/iPad_L_shot1.png)
 
 
 How To:
