@@ -31,6 +31,7 @@ static const int subCellHeight = 40;
 @property (nonatomic) int subCellsAmt;
 @property (assign) int selectedSubCellsAmt;
 @property (nonatomic, assign) NSMutableDictionary *selectableSubCellsState;
+@property (assign) NSIndexPath *indexPath;
 
 - (void) subCellsToggleCheck;
 - (void) rotateExpandBtn:(id)sender;
