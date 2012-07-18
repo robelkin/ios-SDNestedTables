@@ -24,6 +24,19 @@
     return subCellHeight;
 }
 
+- (void) setSubCellsAmt:(int)newSubCellsAmt
+{
+    subCellsAmt = newSubCellsAmt;
+    if(subCellsAmt == 0)
+    {
+        expandBtn.hidden = YES;
+    }
+    else 
+    {
+        expandBtn.hidden = NO;
+    }
+}
+
 #pragma mark - Lifecycle
 
 - (id) initWithCoder:(NSCoder *)aDecoder
