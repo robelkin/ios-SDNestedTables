@@ -12,7 +12,7 @@
 
 @implementation SDGroupCell
 
-@synthesize isExpanded, subTable, subCell, subCellsAmt, selectedSubCellsAmt, selectableSubCellsState, indexPath;
+@synthesize isExpanded, subTable, subCell, subCellsAmt, selectedSubCellsAmt, selectableSubCellsState, cellIndexPath;
 
 + (int) getHeight
 {

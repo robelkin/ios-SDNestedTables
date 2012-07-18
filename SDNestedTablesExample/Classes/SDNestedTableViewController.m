@@ -152,7 +152,7 @@
     }
     
     [cell setParentTable: self];
-    [cell setIndexPath:indexPath];
+    [cell setCellIndexPath:indexPath];
     
     cell = [self mainTable:tableView setItem:cell forRowAtIndexPath:indexPath];
     
