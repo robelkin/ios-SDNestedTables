@@ -8,7 +8,7 @@
 
 #import "SDGroupCell.h"
 #import <QuartzCore/QuartzCore.h>
-#import "SDNestedTable.h"
+#import "SDNestedTableViewController.h"
 
 @implementation SDGroupCell
 
@@ -22,6 +22,19 @@
 + (int) getsubCellHeight
 {
     return subCellHeight;
+}
+
+- (void) setSubCellsAmt:(int)newSubCellsAmt
+{
+    subCellsAmt = newSubCellsAmt;
+    if(subCellsAmt == 0)
+    {
+        expandBtn.hidden = YES;
+    }
+    else 
+    {
+        expandBtn.hidden = NO;
+    }
 }
 
 #pragma mark - Lifecycle
