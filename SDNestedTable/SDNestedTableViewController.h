@@ -27,6 +27,7 @@
 
 - (void) mainItemDidChange: (SDGroupCell *)item forTap:(BOOL)tapped;
 - (void) mainItem:(SDGroupCell *)item subItemDidChange: (SDSelectableCell *)subItem forTap:(BOOL)tapped;
+- (void) toggleCell:(SDGroupCell *)cell atIndexPath: (NSIndexPath *) pathToToggle;
 
 #pragma mark - To be implemented in subclasses
 

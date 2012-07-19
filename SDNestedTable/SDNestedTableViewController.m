@@ -151,6 +151,8 @@
         self.groupCell = nil;
     }
     
+    [cell setupInterface];
+    
     [cell setParentTable: self];
     [cell setCellIndexPath:indexPath];
     
@@ -213,12 +215,16 @@
 {
     
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     SDGroupCell *cell = (SDGroupCell *)[tableView cellForRowAtIndexPath:indexPath];
+    [self toggleCell: cell atIndexPath: indexPath];
+}
+
+- (void) toggleCell:(SDGroupCell *)cell atIndexPath: (NSIndexPath *) pathToToggle
+{
     [cell tapTransition];
     SelectableCellState cellState = [cell toggleCheck];
     NSNumber *cellStateNumber = [NSNumber numberWithInt:cellState];
-    [selectableCellsState setObject:cellStateNumber forKey:indexPath];
+    [selectableCellsState setObject:cellStateNumber forKey:pathToToggle];
     
     [cell subCellsToggleCheck];
     
