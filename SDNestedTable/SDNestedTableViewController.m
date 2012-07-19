@@ -151,6 +151,8 @@
         self.groupCell = nil;
     }
     
+    [cell setupInterface];
+    
     [cell setParentTable: self];
     [cell setCellIndexPath:indexPath];
     
