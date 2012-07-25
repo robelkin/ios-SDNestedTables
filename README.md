@@ -10,6 +10,13 @@ Obj-C module built on UITableView for creating a 2-level nested list UI control,
 ![SDNestedTable Screenshot 5 - iPad Landscape](http://github.com/serverdensity/ios-SDNestedTable/raw/master/README/iPad_L_shot1.png)
 
 
+Concept:
+--------
+
+The module concept is that of having all the default functionality of a UITableView and its cells while at the same time adding for each cell a child UITableView.
+Each cell (SDGroupCell) in the main SDNestedTableViewController tableview acts as controller for its own sub table.
+The state, population and behavior of the table and subtable is instead mostly controlled by SDNestedTableViewController.
+
 How To:
 -------
 
