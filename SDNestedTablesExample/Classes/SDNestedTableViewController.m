@@ -231,23 +231,26 @@
 {
     NSIndexPath *groupCellIndexPath = [self.tableView indexPathForCell:cell];
     NSNumber *cellStateNumber = [NSNumber numberWithInt:cell.selectableCellState];
-    [selectableCellsState setObject:cellStateNumber forKey:groupCellIndexPath];
-    
-    //NSIndexPath *subCellIndexPath = [cell.subTable indexPathForCell:subCell];
-    NSNumber *subCellStateNumber = [NSNumber numberWithInt:subCell.selectableCellState];
-    if (![selectableSubCellsState objectForKey:groupCellIndexPath])
+    if(groupCellIndexPath != nil && cellStateNumber != nil)
     {
-        NSMutableDictionary *subCellState = [[NSMutableDictionary alloc] initWithObjectsAndKeys: subCellStateNumber, indexPath, nil];
-        [selectableSubCellsState setObject:subCellState forKey:groupCellIndexPath];
+        [selectableCellsState setObject:cellStateNumber forKey:groupCellIndexPath];
+        
+        //NSIndexPath *subCellIndexPath = [cell.subTable indexPathForCell:subCell];
+        NSNumber *subCellStateNumber = [NSNumber numberWithInt:subCell.selectableCellState];
+        if (![selectableSubCellsState objectForKey:groupCellIndexPath])
+        {
+            NSMutableDictionary *subCellState = [[NSMutableDictionary alloc] initWithObjectsAndKeys: subCellStateNumber, indexPath, nil];
+            [selectableSubCellsState setObject:subCellState forKey:groupCellIndexPath];
+        }
+        else
+        {
+            [[selectableSubCellsState objectForKey:groupCellIndexPath] setObject:subCellStateNumber forKey:indexPath];
+        }
+        
+        [cell setSelectableSubCellsState: [selectableSubCellsState objectForKey:groupCellIndexPath]];
+        
+        [self mainItem:cell subItemDidChange:subCell forTap:tapped];
     }
-    else
-    {
-        [[selectableSubCellsState objectForKey:groupCellIndexPath] setObject:subCellStateNumber forKey:indexPath];
-    }
-    
-    [cell setSelectableSubCellsState: [selectableSubCellsState objectForKey:groupCellIndexPath]];
-    
-    [self mainItem:cell subItemDidChange:subCell forTap:tapped];
 }
 
 - (void) collapsableButtonTapped: (UIControl *) button withEvent: (UIEvent *) event
